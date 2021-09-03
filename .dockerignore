@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+Dockerfile
+server.trace
+.dockerignore
+package.json-backup
+.git
+.gitignore
+.idea
