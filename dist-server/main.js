@@ -29,13 +29,17 @@ var requestHandler = server.listen(PORT, function () {
 });
 var io = (0, _socket.default)(requestHandler); // Game Instances
 
+const onWiggleEat = (newLength) => {
+  console.log(">>>", newLength)
+}
+
 var gameEngine = new _WiggleGameEngine.default({
   traceLevel: _lanceGg.Lib.Trace.TRACE_NONE
 });
 var serverEngine = new _WiggleServerEngine.default(io, gameEngine, {
   debug: {},
   updateRate: 6
-}); // start the game
+}, onWiggleEat); // start the game
 
 serverEngine.start();
 //# sourceMappingURL=main.js.map
